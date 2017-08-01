@@ -10,7 +10,7 @@ defmodule ImageOptimizerEx.Mixfile do
      start_permanent: Mix.env == :prod,
      description: description(),
      package: package(),
-     deps: []]
+     deps: deps()]
   end
 
   # Configuration for the OTP application
@@ -32,6 +32,12 @@ defmodule ImageOptimizerEx.Mixfile do
       maintainers: ["Peter Arentsen", "Vladimir Kravchenko"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/bettyblocks/image-optimizer-ex"}
+    ]
+  end
+
+  defp deps do
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
