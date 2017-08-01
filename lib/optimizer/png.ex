@@ -1,6 +1,4 @@
 defmodule ImageOptimizerEx.Optimizer.Png do
-  @default_quality 80
-
   def optimize(src, dst, options \\ %{}) do
     flags = cmd_flags(src, dst, options)
     IO.inspect flags |> Enum.join(" ")
@@ -15,7 +13,7 @@ defmodule ImageOptimizerEx.Optimizer.Png do
       src,
       dst
     ]
-    |> Enum.filter(fn el -> el != nil end) 
+    |> Enum.filter(fn el -> el != nil end)
     |> List.flatten
   end
 

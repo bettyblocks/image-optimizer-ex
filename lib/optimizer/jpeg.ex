@@ -1,6 +1,4 @@
 defmodule ImageOptimizerEx.Optimizer.Jpeg do
-  @default_quality 80
-
   def optimize(src, dst, options \\ %{}) do
     flags = cmd_flags(src, dst, options)
     System.cmd("convert", flags, stderr_to_stdout: true)
@@ -15,7 +13,7 @@ defmodule ImageOptimizerEx.Optimizer.Jpeg do
       src,
       dst
     ]
-    |> Enum.filter(fn el -> el != nil end) 
+    |> Enum.filter(fn el -> el != nil end)
     |> List.flatten
   end
 
