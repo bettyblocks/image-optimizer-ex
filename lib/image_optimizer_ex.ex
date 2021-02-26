@@ -17,6 +17,8 @@ defmodule ImageOptimizerEx do
         Optimizer.Jpeg.optimize(src, dst, options)
       Enum.member?([".png"], Path.extname(src)) ->
         Optimizer.Png.optimize(src, dst, options)
+      true ->
+        {:ok, 0}
     end
   end
 end

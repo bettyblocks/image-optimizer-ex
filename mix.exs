@@ -3,7 +3,7 @@ defmodule ImageOptimizerEx.Mixfile do
 
   def project do
     [app: :image_optimizer_ex,
-     version: "0.1.0",
+     version: "0.2.0",
      elixir: "~> 1.3",
      name: "Image Optimizer",
      build_embedded: Mix.env == :prod,

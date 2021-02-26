@@ -1,7 +1,6 @@
 defmodule ImageOptimizerEx.Optimizer.Png do
   def optimize(src, dst, options \\ %{}) do
     flags = cmd_flags(src, dst, options)
-    IO.inspect flags |> Enum.join(" ")
     System.cmd("pngcrush", flags, stderr_to_stdout: true)
   end
 
